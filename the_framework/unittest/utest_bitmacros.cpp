@@ -52,7 +52,7 @@ TEST_CASE("bitmacros","[boolean]"){
     REQUIRE( !Math::Boolean::IS_ODD<u64>(ref) );
   }
   SECTION("1.2 - IS_ODD not IS_EVEN"){
-    auto ref = u64(GENERATE(take(1000, filter([](u64 ref) { return ref % 2 == 1; }, random(0, Math::Boolean::__MAX<s32>())))));
+    auto ref = u64(GENERATE(take(1000, filter([](u64 _x) { return _x % 2 == 1; }, random(0, Math::Boolean::__MAX<s32>())))));
     CAPTURE( ref );
     REQUIRE( !Math::Boolean::IS_EVEN<u64>(ref) );
     REQUIRE(  Math::Boolean::IS_ODD<u64>(ref) );
