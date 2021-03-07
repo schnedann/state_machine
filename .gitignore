@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# backup files
+*.*~
+
+# skip build and trash
+trash/*
+build/*
+*build-*
