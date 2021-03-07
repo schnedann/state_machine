@@ -38,4 +38,6 @@ INCLUDEPATH += $$PWD/../../src/targets/unittest
 INCLUDEPATH += $$PWD
 
 DISTFILES += \
-    $$PWD/../../src/unittest/catch_test_list.txt
+    $$PWD/../../src/unittest/catch_test_list.txt \
+    ../../LICENSE.md \
+    ../../README.md

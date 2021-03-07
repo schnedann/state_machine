@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.1, 2021-03-07T02:49:44. -->
+<!-- Written by QtCreator 4.14.1, 2021-03-07T12:51:10. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -65,14 +65,14 @@
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="AutoTest.CheckStates">
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/src/unittest/utest_statemachine.cpp:/home/danny/ramdisk/sm/src/unittest/utest_statemachine.cpp">Checked</value>
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/src/unittest/utest_statemachine.cpp:statemachine">Checked</value>
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/the_framework/unittest/utest_bitmacros.cpp:/home/danny/ramdisk/sm/the_framework/unittest/utest_bitmacros.cpp">Checked</value>
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/the_framework/unittest/utest_bitmacros.cpp:bitmacros">Checked</value>
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/the_framework/unittest/utest_math_discrete.cpp:/home/danny/ramdisk/sm/the_framework/unittest/utest_math_discrete.cpp">Checked</value>
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/the_framework/unittest/utest_math_discrete.cpp:Math-Discrete">Checked</value>
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/the_framework/unittest/utest_meta.cpp:/home/danny/ramdisk/sm/the_framework/unittest/utest_meta.cpp">Checked</value>
-    <value type="Qt::CheckState" key="/home/danny/ramdisk/sm/the_framework/unittest/utest_meta.cpp:Meta">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/src/unittest/utest_statemachine.cpp:/home/danny/ramdisk/state_machine/src/unittest/utest_statemachine.cpp">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/src/unittest/utest_statemachine.cpp:statemachine">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/the_framework/unittest/utest_bitmacros.cpp:/home/danny/ramdisk/state_machine/the_framework/unittest/utest_bitmacros.cpp">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/the_framework/unittest/utest_bitmacros.cpp:bitmacros">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/the_framework/unittest/utest_math_discrete.cpp:/home/danny/ramdisk/state_machine/the_framework/unittest/utest_math_discrete.cpp">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/the_framework/unittest/utest_math_discrete.cpp:Math-Discrete">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/the_framework/unittest/utest_meta.cpp:/home/danny/ramdisk/state_machine/the_framework/unittest/utest_meta.cpp">Checked</value>
+    <value type="Qt::CheckState" key="/home/danny/ramdisk/state_machine/the_framework/unittest/utest_meta.cpp:Meta">Checked</value>
    </valuemap>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
@@ -103,8 +103,8 @@
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/danny/ramdisk/sm/toolchain/build-sm-Desktop-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/danny/ramdisk/sm/toolchain/build-sm-Desktop-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/danny/ramdisk/state_machine/toolchain/build-sm-Desktop-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/danny/ramdisk/state_machine/toolchain/build-sm-Desktop-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -298,15 +298,16 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/danny/ramdisk/sm/toolchain/qtcreator/sm.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/danny/ramdisk/sm/toolchain/qtcreator/sm.pro</value>
-    <value type="QString" key="RunConfiguration.Arguments">-d yes --input-file ../../src/unittest/catch_test_list.txt --rng-seed 'time'</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">sm2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/danny/ramdisk/state_machine/toolchain/qtcreator/sm.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/danny/ramdisk/state_machine/toolchain/qtcreator/sm.pro</value>
+    <value type="QString" key="RunConfiguration.Arguments">-d yes --rng-seed 'time' --abortx 3</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/danny/ramdisk/sm/toolchain/build-sm-Desktop-Debug</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/danny/ramdisk/state_machine/toolchain/build-sm-Desktop-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
