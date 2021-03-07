@@ -1,11 +1,11 @@
 /******************************************************************************/
 /** Simple Hash Functions / Hash-Function building Blocks                    **/
 /** collected and / or implemented by                                        **/
-/** Danny Schneider, 2017-2020                                               **/
+/** Danny Schneider, 2017-2021                                               **/
 /******************************************************************************/
 
 /*
- * Copyright 2017-2020,Danny Schneider
+ * Copyright 2017-2021,Danny Schneider
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -62,8 +62,8 @@ template<typename T> auto doublehash(T const& _x, T const& _y, T const& iter, T 
   return (_x+T((u64(iter)*u64(iter))*_y)%_M);
 }
 
-}
+} //namespace
 
-}
+} //namespace
 
 #endif // SIMPLE_HASH_FCT_H

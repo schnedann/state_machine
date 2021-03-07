@@ -3,7 +3,7 @@
 /** if not stated otherwise:                                                 **/
 /** Assume Unsigned Integer Numbers and Two'sCompliment Arithmethic          **/
 /** collected and / or implemented by                                        **/
-/** Danny Schneider, 2017-2020                                               **/
+/** Danny Schneider, 2017-2021                                               **/
 /**                                                                          **/
 /** Sources & Ideas for Algorithms used here:                                **/
 /** http://aggregate.org/MAGIC/                                              **/
@@ -13,7 +13,7 @@
 /******************************************************************************/
 
 /*
- * Copyright 2017-2020,Danny Schneider
+ * Copyright 2017-2021,Danny Schneider
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
