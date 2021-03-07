@@ -68,13 +68,21 @@
 
 namespace STATE_MACHINE {
 
-  constexpr static u8 const noTr = 0;
+  constexpr static u8 const noTr = 0; //Mark for "No Tranaction"
 
+  /**
+   * Base Class for State Machine Graph Management
+   */
   template<u8 STATES, u8 TRANSITIONS> class adjacency_matrix_base{
   public:
     std::array<std::function<void()>,STATES>      state_lst{};
     std::array<std::function<bool()>,TRANSITIONS> transition_lst{};
 
+    /**
+     * @brief adjacency_matrix_base - Constructor
+     * @param _st - Array of State Callbacks
+     * @param _tr - Array of Transition Callbacks
+     */
     adjacency_matrix_base(std::array<std::function<void()>,STATES>      const& _st,
                           std::array<std::function<bool()>,TRANSITIONS> const& _tr):state_lst(_st),transition_lst(_tr){}
 
@@ -84,6 +92,9 @@ namespace STATE_MACHINE {
     virtual void step()=0;
   };
 
+  /**
+   *
+   */
   template<u8 STATES, u8 TRANSITIONS> class adjacency_matrix:
     public adjacency_matrix_base<STATES,TRANSITIONS>{
   public:
@@ -92,26 +103,37 @@ namespace STATE_MACHINE {
 
   private:
 
-    matrix_t matrix{};
+    matrix_t matrix{}; // adjacency State Matrix
+
+    /**
+     * @brief init_matrix
+     * @param il2d
+     */
     void init_matrix(Meta::Types::nested_init_lists_st<u8,2>::type const& il2d){
       size_t idx_2d=0;
-      for(auto il1d:il2d){
+      for(auto const& il1d:il2d){
         std::copy(il1d.begin(),il1d.end(),matrix[idx_2d].begin());
         ++idx_2d;
       }
       return;
     }
 
-    u8 state{0};
+    u8 state{0}; //current State
 
     //---
 
-//[[nodiscard]] virtual u8 get_transition(u8 const _from, u8 const _to) const noexcept override{
+    /**
+     * @brief get_transition - Query transaction from adjacency State Matrix
+     * @param _from
+     * @param _to
+     * @return
+     */
     [[nodiscard]] u8 get_transition(u8 const _from, u8 const _to) const noexcept{
       return matrix[_from][_to];
     }
 
   public:
+    //Constructors
     adjacency_matrix()=default;
     adjacency_matrix(adjacency_matrix const&)=delete;
     adjacency_matrix(adjacency_matrix &&)=delete;
@@ -121,6 +143,7 @@ namespace STATE_MACHINE {
       init_matrix(il);
       return;
     }
+    //Destructor
     ~adjacency_matrix()=default;
 
     /**
@@ -131,7 +154,7 @@ namespace STATE_MACHINE {
     }
 
     /**
-     *
+     * Step the State Machine for 1 Cycle
      */
     virtual void step()noexcept override{
 
@@ -184,6 +207,9 @@ namespace STATE_MACHINE {
 
 //-----
 
+/**
+ * Apply 'Or' to all values of an List
+ */
 template<typename T,size_t S> constexpr T or_list(std::array<T,S> const& lst){
   Compile::Guards::IsUnsigned<T>();
   T res{0};
@@ -193,17 +219,26 @@ template<typename T,size_t S> constexpr T or_list(std::array<T,S> const& lst){
   return res;
 }
 
+/**
+ * Generate a Mask with one Bit set, with num is the position of the set bit = 0..(N-1)
+ */
 template<typename T> constexpr T num2mask(u8 num){
   Compile::Guards::IsUnsigned<T>();
   return T(1)<<num;
 }
 
+/**
+ * Query which Transaction should be executed
+ */
 template<typename T> constexpr T get_priority_transition(T const tv){
   Compile::Guards::IsUnsigned<T>();
   //Return lowest bit set in transition vector
   return tv&(~(tv-1));
 }
 
+ /**
+  * Space minimal State machine
+  */
  template<u8 STATES, u8 TRANSITIONS, typename T> class adjacency_matrix_spaceopt:
     public adjacency_matrix_base<STATES,TRANSITIONS>{
   private:
